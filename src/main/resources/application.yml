@@ -11,10 +11,14 @@ spring:
       username: root
       password: wang
   redis:
-    host: ${REDIS_HOST:127.0.0.1}
+    host: 127.0.0.1
     port: 6379
     password: 123456
     database: 0
+    timeout: 50000
+  cache:
+    redis:
+      time-to-live: 1800000 #设置缓存数据的过期时间
 mybatis-plus:
   configuration:
     #在映射实体或者属性时，将数据库中表名和字段名中的下划线去掉，按照驼峰命名法映射
@@ -25,4 +29,4 @@ mybatis-plus:
       id-type: ASSIGN_ID
 
 reggie:
-  path: E:\\Wang Yufeng
+  path: E:\\img\
